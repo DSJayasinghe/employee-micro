@@ -50,8 +50,8 @@ public class EmployeeService {
         return null;
     }
 
-    public Employee employeeLogin(String name, int tel) {
-        return employeeRepository.employeeLogin(name,tel);
+    public Employee employeeLogin(String name, String password) {
+        return employeeRepository.employeeLogin(name,password);
     }
 
 }

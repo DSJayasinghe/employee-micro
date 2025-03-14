@@ -17,7 +17,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    @PostMapping("/register")
+    @PostMapping("/employees")
     public Employee registerEmployee(@RequestBody Employee employee)
     {
         return employeeService.registerEmployee(employee);
@@ -44,9 +44,9 @@ public class EmployeeController {
     }
 
     //login
-    @GetMapping(path="/employees", params={"name", "tel"})
-    public ResponseEntity<Employee> employeeLogin(@RequestParam String name, @RequestParam int tel) {
-        Employee employee = employeeService.employeeLogin(name, tel);
+    @GetMapping(path="/employees", params={"name", "password"})
+    public ResponseEntity<Employee> employeeLogin(@RequestParam String name, @RequestParam String password) {
+        Employee employee = employeeService.employeeLogin(name, password);
         if (employee != null) {
             return ResponseEntity.ok(employee);
         } else {

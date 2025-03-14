@@ -20,7 +20,7 @@ public class Employee {
     private String employeeTel;
 
     @Column(name = "employee_password") //represent the column of the table
-    private String password;
+    private String employeePassword;
 
 
     public int getEmployeeId() {
@@ -56,11 +56,11 @@ public class Employee {
     }
 
     public String getPassword() {
-        return password;
+        return employeePassword;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.employeePassword = password;
     }
 }
 
